@@ -27,7 +27,7 @@ for(package in c("RJDemetra", "ggdemetra", "rjdqa", "rjdmarkdown", "rjwsacrunche
   for(i in seq_len(nrow(tab))){
     pkg_stats[pkg_stats$date >= tab[i,2],"version"] <- tab[i,1]
   }
-  write.csv2(pkg_stats,
+  write.csv(pkg_stats,
              file = sprintf("data/full_table/%s.csv", package),
              fileEncoding = "UTF-8",
              row.names = FALSE)
@@ -36,7 +36,7 @@ for(package in c("RJDemetra", "ggdemetra", "rjdqa", "rjdmarkdown", "rjwsacrunche
   summary_table <- cbind(tab, sum_stats$count, cumsum(sum_stats$count))
   colnames(summary_table) <- c("Name", "Date release", "Total downloads",
                                "Cumulative downloads")
-  write.csv2(summary_table,
+  write.csv(summary_table,
              file = sprintf("data/summary/%s.csv", package),
              fileEncoding = "UTF-8",
              row.names = FALSE)
