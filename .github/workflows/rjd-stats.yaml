@@ -3,7 +3,7 @@
 on:
   schedule:
     # monday to friday at 8:00
-    - cron:  '0 8 * * 1,2,3,4,5'
+    - cron:  '0 12 * * 1,2,3,4,5'
 
 name: rjd-stats
 
