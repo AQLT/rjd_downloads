@@ -2,8 +2,8 @@
 # Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
 on:
   schedule:
-    # monday to friday at 8:00
-    - cron:  '0 12 * * 1,2,3,4,5'
+    # Monday to Friday at 7:00 UTC
+    - cron:  '0 7 * * 1-5'
 
 name: rjd-stats
 
