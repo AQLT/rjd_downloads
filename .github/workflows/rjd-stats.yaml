@@ -1,9 +1,10 @@
 # Workflow derived from https://github.com/r-lib/actions/tree/master/examples
 # Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
 on:
-  schedule:
+  workflow_dispatch:
+  #schedule:
     # Monday to Friday at 7:00 UTC
-    - cron:  '0 7 1 * *'
+  #  - cron:  '0 7 1 * *'
 
 name: rjd-stats
 
